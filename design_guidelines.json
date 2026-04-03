@@ -1,0 +1,160 @@
+{
+  "theme_and_archetype": {
+    "theme": "Light",
+    "archetype": "6 (Vibrant Play)",
+    "description": "Joyful, safe, and professional aesthetic designed for parents but inspired by children. Uses bright, organic shapes, bouncing animations, and rounded soft UI to communicate a premium yet deeply playful kindergarten environment."
+  },
+  "typography": {
+    "heading_font": "Nunito",
+    "body_font": "Poppins",
+    "heading_classes": "font-nunito tracking-tight font-extrabold",
+    "body_classes": "font-poppins text-gray-700 leading-relaxed",
+    "hierarchy": {
+      "h1": "text-5xl md:text-6xl+ leading-tight",
+      "h2": "text-4xl md:text-5xl leading-tight",
+      "h3": "text-2xl md:text-3xl",
+      "h4": "text-xl font-bold",
+      "body": "text-base md:text-lg"
+    }
+  },
+  "color_palette": {
+    "primary": {
+      "red": "#C8161D",
+      "red_hover": "#A61217",
+      "red_light": "#FDE8E9"
+    },
+    "secondary": {
+      "lime": "#9DC41E",
+      "lime_hover": "#86A917",
+      "lime_light": "#F3F9E2"
+    },
+    "neutral": {
+      "black": "#1A1A1A",
+      "white": "#FFFFFF",
+      "gray_light": "#F8FAFC",
+      "gray_medium": "#94A3B8"
+    },
+    "accents": {
+      "sky_blue": "#E0F2FE",
+      "butter_yellow": "#FEF9C3"
+    },
+    "backgrounds": {
+      "main": "#FFFFFF",
+      "section_alternate": "#F8FAFC",
+      "blobs": "Soft radial gradients combining primary red (at 5% opacity), lime green (at 10% opacity), and butter yellow for playful, organic backgrounds."
+    }
+  },
+  "layout_spacing": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_padding": "py-20 md:py-32",
+    "card_padding": "p-6 md:p-8",
+    "gap": "gap-8 md:gap-12",
+    "grid_strategy": "Bento-style grids for Programs and Gallery sections. Mix of tall, wide, and square cells to create visual tension and playfulness instead of boring uniform rows."
+  },
+  "components_styling": {
+    "border_radius": {
+      "cards": "rounded-3xl",
+      "buttons": "rounded-full",
+      "images": "rounded-[2rem]",
+      "blobs": "rounded-[60%_40%_30%_70%/60%_30%_70%_40%]"
+    },
+    "shadows": {
+      "soft": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+      "hover": "shadow-[0_20px_40px_rgba(157,196,30,0.15)]",
+      "button": "shadow-[0_8px_20px_rgba(200,22,29,0.2)]"
+    },
+    "borders": "2px solid transparent, hovering to border-lime-500/20 on cards.",
+    "buttons": {
+      "primary": "bg-[#C8161D] text-white hover:bg-[#A61217] rounded-full px-8 py-4 font-bold shadow-lg transform transition-transform hover:-translate-y-1",
+      "secondary": "bg-[#9DC41E] text-white hover:bg-[#86A917] rounded-full px-8 py-4 font-bold shadow-lg transform transition-transform hover:-translate-y-1",
+      "outline": "border-2 border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white rounded-full px-8 py-4 font-bold transition-all"
+    }
+  },
+  "motion_and_animations": {
+    "library": "framer-motion",
+    "hero_entrance": "Spring bounce effect for text and images. Delay children staggered by 0.1s.",
+    "hover_states": "Cards lift up (-translate-y-2) with expanded soft shadows.",
+    "scroll_reveal": "Fade up with slight scale (0.95 to 1) utilizing `whileInView`.",
+    "micro_interactions": "Icons within buttons bump to the right on hover. Testimonial carousel uses smooth pan transitions."
+  },
+  "media_urls": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_e8d411ed-442e-4bb2-8983-8c3ef5c754a7/artifacts/0cxz66vb_IMG_20260403_184615.jpg",
+      "description": "Happy Kidz Official Logo",
+      "usage": "Header, Footer, Meta tags"
+    },
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1771765812031-22653b4c70a6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxoYXBweSUyMHByZXNjaG9vbCUyMGtpZHMlMjBwbGF5aW5nJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc3NTI0MjQ5Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Happy kids learning and creating art in a classroom",
+      "usage": "Main Hero Section Image - Home Page"
+    },
+    "programs": [
+      {
+        "url": "https://images.unsplash.com/photo-1770096679844-57ca92c2b64b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHw0fHxoYXBweSUyMHByZXNjaG9vbCUyMGtpZHMlMjBwbGF5aW5nJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc3NTI0MjQ5Nnww&ixlib=rb-4.1.0&q=85",
+        "description": "Children drawing with a teacher",
+        "usage": "Preschool / Kindergarten program card"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1767082090567-ac26364f0669?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxoYXBweSUyMGNoaWxkcmVuJTIwcnVubmluZyUyMHBhcmt8ZW58MHx8fHwxNzc1MjQyNTEyfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Kids running in park",
+        "usage": "Summer Camp / Outdoor Activities card"
+      }
+    ],
+    "about": {
+      "url": "https://images.unsplash.com/photo-1761604478724-13fe879468cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxwcmVzY2hvb2wlMjB0ZWFjaGVyJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc3NTI0MjUxMnww&ixlib=rb-4.1.0&q=85",
+      "description": "Teacher guiding children",
+      "usage": "About Page - Story/Mission section"
+    },
+    "testimonials": {
+      "url": "https://images.unsplash.com/photo-1769673051638-f508eb8b7591?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwxfHxwYXJlbnQlMjB0b2RkbGVyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc1MjQyNTEyfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Happy parents with toddler",
+      "usage": "Testimonials Avatar / Review Highlight"
+    }
+  },
+  "pages_and_functionalities": {
+    "global": {
+      "header": "Sticky glassmorphism header (bg-white/90 backdrop-blur-md) with Logo, Links, and primary CTA (Enroll Now).",
+      "footer": "Dark mode footer (bg-[#1A1A1A] text-white) with colorful accent blob, quick links, social media icons, and newsletter signup.",
+      "whatsapp_button": "Fixed bottom-right floating button using Lime Green (#9DC41E) with bounce animation for quick inquiry.",
+      "icons": "Use lucide-react (Smile, BookOpen, MapPin, Phone, Mail, etc.)"
+    },
+    "home": {
+      "hero": "Two-column or asymmetrical layout. Left: H1, Subtitle, CTA buttons. Right: Main image with rounded-3xl and overlapping floating geometric shapes (circles, blobs in red and lime).",
+      "highlights": "3-4 key features (Safety, Expert Teachers, Play-based) in bento-grid cards with colorful icons.",
+      "programs_preview": "Grid showing top programs, hovering scales the card.",
+      "testimonials": "Carousel of parent reviews with 5-star ratings.",
+      "gallery": "Masonry or bento grid of happy children photos."
+    },
+    "about": {
+      "story": "Rich text block about the school's origin, accompanied by side image.",
+      "mission_vision": "Two beautifully styled cards with different background tints (red-light, lime-light).",
+      "history_timeline": "Vertical timeline component indicating milestones, using alternating sides and animated connecting line."
+    },
+    "programs": {
+      "layout": "Detailed grid of preschool, after-school, and summer camp options. Each with age group labels, curriculum details, and 'Learn More' buttons."
+    },
+    "admissions": {
+      "timeline": "Step-by-step horizontal or vertical process (Inquiry -> Tour -> Application -> Enrollment) using numbered circles.",
+      "form": "Enrollment inquiry form (using shadcn-like clean inputs). Must have client-side validation and success state."
+    },
+    "team": {
+      "teacher_cards": "Grid of teacher portraits. Hover animation reveals their qualification or favorite children's book."
+    },
+    "blog": {
+      "grid": "Clean grid layout showing latest updates, parenting tips, and school events. Each card has a category tag."
+    },
+    "contact": {
+      "form": "Input fields (Name, Email, Phone, Message). Must show a 'Thank you!' success message upon submission.",
+      "info": "Map placeholder (or embedded Google Map), Phone, Email, Address styled cleanly in a sidebar next to the form."
+    }
+  },
+  "technical_instructions_for_main_agent": [
+    "Use react-router-dom for multi-page navigation.",
+    "Ensure all interactive elements have data-testid attributes for testing.",
+    "Use Framer Motion for all route transitions and component reveals.",
+    "Implement 'lucide-react' for all icons.",
+    "Create a custom background utility class in CSS for the 'blobs' to avoid heavy image loading, using radial-gradients of #C8161D and #9DC41E at low opacities.",
+    "Do not use TypeScript, use plain .jsx/.js files as per standard setup.",
+    "Follow the generous padding and typography rules strictly to maintain the 'premium preschool' aesthetic."
+  ]
+}
