@@ -31,7 +31,7 @@ const posts = [
     date: "December 20, 2024",
     author: "Happy Kidz Team",
     excerpt: "Our Annual Sports Day was a huge success! Here are the highlights from a day filled with excitement, teamwork, and proud moments.",
-    image: "https://images.unsplash.com/photo-1561625116-5f8675632ab2?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?w=600&q=80",
   },
   {
     title: "How to Prepare Your Child for Their First Day of School",
