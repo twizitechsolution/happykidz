@@ -1,34 +1,161 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* ===== BUTTONS ===== */
+.btn-primary {
+  background-color: #C8161D;
+  color: white;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(200, 22, 29, 0.25);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #A61217;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(200, 22, 29, 0.35);
+}
+.btn-secondary {
+  background-color: #9DC41E;
+  color: white;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 8px 20px rgba(157, 196, 30, 0.25);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+.btn-secondary:hover {
+  background-color: #86A917;
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background-color: transparent;
+  color: #1A1A1A;
+  border: 2.5px solid #1A1A1A;
+  border-radius: 9999px;
+  padding: 0.7rem 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  background-color: #1A1A1A;
+  color: white;
+  transform: translateY(-2px);
+}
+.btn-outline-white {
+  background-color: transparent;
+  color: white;
+  border: 2.5px solid white;
+  border-radius: 9999px;
+  padding: 0.7rem 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-outline-white:hover {
+  background-color: white;
+  color: #C8161D;
+  transform: translateY(-2px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* ===== SECTION LABEL ===== */
+.section-label {
+  display: inline-block;
+  background: linear-gradient(135deg, #FDE8E9 0%, #F3F9E2 100%);
+  color: #C8161D;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 1.1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(200, 22, 29, 0.15);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* ===== PAGE HERO ===== */
+.page-hero {
+  background: linear-gradient(135deg, #C8161D 0%, #8B1010 100%);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  pointer-events: none;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: 10%;
+  width: 350px;
+  height: 350px;
+  background: rgba(157, 196, 30, 0.12);
+  border-radius: 40% 60% 70% 30%;
+  pointer-events: none;
 }
 
-.App-link {
-    color: #61dafb;
+/* ===== HOVER CARD ===== */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(200, 22, 29, 0.12);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* ===== INPUT FIELD ===== */
+.input-field {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #1A1A1A;
+  background: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
 }
+.input-field:focus {
+  border-color: #C8161D;
+  box-shadow: 0 0 0 3px rgba(200, 22, 29, 0.1);
+}
+.input-field::placeholder {
+  color: #94a3b8;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f8f8f8; }
+::-webkit-scrollbar-thumb { background: #C8161D; border-radius: 10px; }
