@@ -5,6 +5,14 @@ import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight, Users, Award } from
 import PageHero from '../components/PageHero';
 import { fadeUp, stagger, viewportOpts } from '../hooks/useScrollAnimation';
 
+const Wave = ({ fill, bg = "transparent" }) => (
+  <div className="wave-divider" style={{ background: bg }}>
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ height: 50 }}>
+      <path d="M0,35 C200,70 400,0 720,35 C1040,70 1280,5 1440,35 L1440,70 L0,70 Z" fill={fill} />
+    </svg>
+  </div>
+);
+
 const testimonials = [
   { name: "Priya Sharma", role: "Parent of Aanya (Nursery)", rating: 5, text: "Happy Kidz has been a wonderful experience for our daughter. The teachers are incredibly caring and the curriculum is world-class. Aanya loves going to school every day and comes home with new things to share!", avatar: "https://i.pravatar.cc/100?img=1" },
   { name: "Rajesh Kumar", role: "Parent of Arjun (Kindergarten)", rating: 5, text: "The transformation in my son has been incredible. He's become more confident, creative, and socially aware. The staff truly goes above and beyond for every child. Couldn't ask for better educators.", avatar: "https://i.pravatar.cc/100?img=3" },
@@ -30,26 +38,28 @@ export default function Testimonials() {
       <PageHero title="Testimonials" subtitle="Hear directly from the parents who trust Happy Kidz with their most precious gift." breadcrumb="Testimonials" />
 
       {/* Stats */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white polka-dots">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { num: "500+", label: "Happy Families", icon: Users },
-              { num: "4.9", label: "Average Rating", icon: Star },
-              { num: "10+", label: "Years of Trust", icon: Award },
-              { num: "98%", label: "Would Recommend", icon: Quote },
+              { num: "500+", label: "Happy Families", icon: Users, bg: "#FDE8E9", ic: "#C8161D" },
+              { num: "4.9", label: "Average Rating", icon: Star, bg: "#FEF9C3", ic: "#ca8a04" },
+              { num: "10+", label: "Years of Trust", icon: Award, bg: "#F3F9E2", ic: "#9DC41E" },
+              { num: "98%", label: "Would Recommend", icon: Quote, bg: "#E0F2FE", ic: "#0284c7" },
             ].map((s, i) => (
-              <motion.div key={i} className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-                <div className="w-16 h-16 bg-[#FDE8E9] rounded-2xl flex items-center justify-center mx-auto mb-3">
-                  <s.icon size={28} className="text-[#C8161D]" />
+              <motion.div key={i} className="text-center bg-white rounded-3xl p-6 shadow-sm border border-gray-100" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: s.bg }}>
+                  <s.icon size={28} style={{ color: s.ic }} />
                 </div>
-                <div className="font-nunito font-extrabold text-4xl text-[#C8161D] mb-1">{s.num}</div>
+                <div className="font-nunito font-extrabold text-4xl mb-1" style={{ color: s.ic }}>{s.num}</div>
                 <div className="text-gray-500 text-sm">{s.label}</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      <Wave fill="#F8FAFC" bg="white" />
 
       {/* Featured Carousel */}
       <section className="py-16 bg-[#F8FAFC]">
@@ -90,6 +100,8 @@ export default function Testimonials() {
         </div>
       </section>
 
+      <Wave fill="white" bg="#F8FAFC" />
+
       {/* All Testimonials Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +111,7 @@ export default function Testimonials() {
           </motion.div>
           <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" initial="hidden" whileInView="visible" viewport={viewportOpts} variants={stagger}>
             {rest.map((t, i) => (
-              <motion.div key={i} variants={fadeUp} className="hover-card bg-white rounded-3xl p-8 border border-gray-100" data-testid={`all-testimonial-${i}`}>
+              <motion.div key={i} variants={fadeUp} className="cartoon-card bg-white rounded-3xl p-8 border border-gray-100" data-testid={`all-testimonial-${i}`}>
                 <div className="flex gap-1 mb-4">{[...Array(t.rating)].map((_, j) => <Star key={j} size={14} fill="#FBBF24" className="text-yellow-400" />)}</div>
                 <p className="text-gray-600 leading-relaxed mb-6 italic text-sm">"{t.text}"</p>
                 <div className="flex items-center gap-3">
@@ -114,6 +126,8 @@ export default function Testimonials() {
           </motion.div>
         </div>
       </section>
+
+      <Wave fill="#C8161D" bg="white" />
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-[#C8161D] to-[#9B1015] text-white">

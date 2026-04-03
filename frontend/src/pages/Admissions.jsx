@@ -5,6 +5,14 @@ import { ClipboardList, CalendarCheck, FileText, GraduationCap, CheckCircle, Arr
 import PageHero from '../components/PageHero';
 import { fadeUp, fadeLeft, fadeRight, stagger, viewportOpts } from '../hooks/useScrollAnimation';
 
+const Wave = ({ fill, bg = "transparent" }) => (
+  <div className="wave-divider" style={{ background: bg }}>
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ height: 50 }}>
+      <path d="M0,35 C200,70 400,0 720,35 C1040,70 1280,5 1440,35 L1440,70 L0,70 Z" fill={fill} />
+    </svg>
+  </div>
+);
+
 const steps = [
   { icon: Phone, num: "01", title: "Initial Inquiry", desc: "Contact us via phone, email, or WhatsApp to express your interest and get basic information about available programs.", color: "#FDE8E9", iconColor: "#C8161D" },
   { icon: CalendarCheck, num: "02", title: "School Visit & Tour", desc: "Schedule a campus visit to see our facilities, meet our educators, and experience the Happy Kidz environment firsthand.", color: "#F3F9E2", iconColor: "#9DC41E" },
@@ -63,7 +71,7 @@ export default function Admissions() {
           </motion.div>
           <motion.div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" initial="hidden" whileInView="visible" viewport={viewportOpts} variants={stagger}>
             {steps.map((step, i) => (
-              <motion.div key={i} variants={fadeUp} className="relative hover-card bg-white rounded-3xl p-8 border border-gray-100">
+              <motion.div key={i} variants={fadeUp} className="cartoon-card relative bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-[#C8161D] rounded-2xl flex items-center justify-center text-white font-nunito font-extrabold text-lg shadow-lg">{step.num}</div>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style={{ backgroundColor: step.color }}>
                   <step.icon size={26} style={{ color: step.iconColor }} />
@@ -73,8 +81,47 @@ export default function Admissions() {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Documents & Timeline */}
+          <motion.div className="mt-14 rounded-3xl p-8 bg-[#FDE8E9]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <h3 className="font-nunito font-extrabold text-2xl text-[#C8161D] mb-3">Documents Required</h3>
+                <p className="text-gray-600 text-sm mb-4">Please bring the following at the time of enrollment:</p>
+                <ul className="space-y-2.5">
+                  {["Birth certificate (original + photocopy)", "Passport-size photographs (4 copies)", "Previous school records (if any)", "Parent/guardian Aadhaar card", "Residence proof (any utility bill)"].map((doc, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-700 bg-white rounded-xl px-3 py-2">
+                      <CheckCircle size={15} className="text-[#C8161D] flex-shrink-0" />
+                      {doc}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-nunito font-extrabold text-2xl text-[#9DC41E] mb-3">Admission Timeline</h3>
+                <div className="space-y-3">
+                  {[
+                    { month: "January – March", activity: "Applications Open" },
+                    { month: "March – April", activity: "School Visits & Interviews" },
+                    { month: "April", activity: "Admission Offers Sent" },
+                    { month: "May – June", activity: "Enrollment & Orientation" },
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-3 bg-white rounded-xl p-3">
+                      <div className="w-7 h-7 bg-[#C8161D] rounded-lg flex items-center justify-center flex-shrink-0 text-white font-nunito font-bold text-xs">{idx + 1}</div>
+                      <div>
+                        <div className="text-xs text-gray-500">{item.month}</div>
+                        <div className="font-semibold text-sm text-[#1A1A1A]">{item.activity}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
+
+      <Wave fill="#F8FAFC" bg="white" />
 
       {/* Enrollment Form */}
       <section className="py-20 bg-[#F8FAFC]">
@@ -152,6 +199,8 @@ export default function Admissions() {
         </div>
       </section>
 
+      <Wave fill="white" bg="#F8FAFC" />
+
       {/* Tuition Fees */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -190,6 +239,8 @@ export default function Admissions() {
           </motion.div>
         </div>
       </section>
+
+      <Wave fill="#C8161D" bg="white" />
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-[#C8161D] to-[#9B1015] text-white">

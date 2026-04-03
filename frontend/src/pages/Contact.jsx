@@ -4,6 +4,14 @@ import { MapPin, Phone, Mail, Clock, CheckCircle, ArrowRight, MessageCircle } fr
 import PageHero from '../components/PageHero';
 import { fadeUp, fadeLeft, fadeRight, viewportOpts } from '../hooks/useScrollAnimation';
 
+const Wave = ({ fill, bg = "transparent" }) => (
+  <div className="wave-divider" style={{ background: bg }}>
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ height: 50 }}>
+      <path d="M0,35 C200,70 400,0 720,35 C1040,70 1280,5 1440,35 L1440,70 L0,70 Z" fill={fill} />
+    </svg>
+  </div>
+);
+
 const initialForm = { name: '', email: '', phone: '', subject: '', message: '' };
 
 export default function Contact() {
@@ -165,6 +173,8 @@ export default function Contact() {
         </div>
       </section>
 
+      <Wave fill="#F8FAFC" bg="white" />
+
       {/* Map Section */}
       <section className="py-16 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,6 +213,8 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
+
+      <Wave fill="#1A1A1A" bg="#F8FAFC" />
 
       {/* Quick Contact Strip */}
       <section className="py-12 bg-[#1A1A1A] text-white">

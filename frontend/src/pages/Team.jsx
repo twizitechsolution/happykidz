@@ -5,6 +5,14 @@ import { BookOpen, Heart, Star, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { fadeUp, stagger, viewportOpts } from '../hooks/useScrollAnimation';
 
+const Wave = ({ fill, bg = "transparent" }) => (
+  <div className="wave-divider" style={{ background: bg }}>
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ height: 50 }}>
+      <path d="M0,35 C200,70 400,0 720,35 C1040,70 1280,5 1440,35 L1440,70 L0,70 Z" fill={fill} />
+    </svg>
+  </div>
+);
+
 const leadership = [
   {
     name: "Mrs. Anita Das",
@@ -43,7 +51,7 @@ export default function Team() {
       <PageHero title="Our Team" subtitle="Meet the passionate educators who make Happy Kidz a truly special place for children." breadcrumb="Our Team" />
 
       {/* Leadership */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#F8FAFC] polka-dots">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-14" initial="hidden" whileInView="visible" viewport={viewportOpts} variants={fadeUp}>
             <span className="section-label">School Leadership</span>
@@ -53,7 +61,7 @@ export default function Team() {
             {leadership.map((person, i) => (
               <motion.div
                 key={i}
-                className="hover-card bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-md"
+                className="cartoon-card bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-md"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -85,6 +93,29 @@ export default function Team() {
         </div>
       </section>
 
+      <Wave fill="#FDE8E9" bg="white" />
+
+      {/* Stats Strip */}
+      <section className="py-10 bg-[#FDE8E9]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { num: "10+", label: "Dedicated Teachers" },
+              { num: "75+", label: "Combined Years Experience" },
+              { num: "100%", label: "Certified Educators" },
+              { num: "5", label: "Specialist Subjects" },
+            ].map((s, i) => (
+              <motion.div key={i} className="text-center bg-white rounded-2xl p-5 shadow-sm" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+                <div className="font-nunito font-extrabold text-3xl text-[#C8161D] mb-1">{s.num}</div>
+                <div className="text-gray-500 text-sm">{s.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Wave fill="#F8FAFC" bg="#FDE8E9" />
+
       {/* Teachers Grid */}
       <section className="py-20 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +129,7 @@ export default function Team() {
               <motion.div
                 key={i}
                 variants={fadeUp}
-                className="group hover-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer"
+                className="group cartoon-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer"
                 data-testid={`teacher-card-${i}`}
               >
                 <div className="relative h-60 overflow-hidden">
@@ -125,6 +156,8 @@ export default function Team() {
           </motion.div>
         </div>
       </section>
+
+      <Wave fill="#1A1A1A" bg="#F8FAFC" />
 
       {/* Join team CTA */}
       <section className="py-16 bg-[#1A1A1A] text-white">
