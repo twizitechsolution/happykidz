@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowRight, ChevronRight, CheckCircle } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { fadeUp, stagger, viewportOpts } from '../hooks/useScrollAnimation';
+import {
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15, img16, img17
+} from '../assets/images';
 
 const categories = ["All", "Parenting Tips", "School Updates", "Activities", "Child Development", "Events"];
 
@@ -14,7 +18,7 @@ const posts = [
     date: "February 10, 2025",
     author: "Mrs. Anita Das",
     excerpt: "Our expert educators share 7 proven tips to support your child's growth at home and strengthen the parent-school partnership.",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
+    image: img4,
     featured: true,
     tips: ["Maintain daily routines", "Encourage independence", "Read together daily", "Limit screen time", "Promote communication", "Use positive discipline", "Stay involved in school life"],
   },
@@ -24,7 +28,7 @@ const posts = [
     date: "January 28, 2025",
     author: "Mrs. Priya Mohapatra",
     excerpt: "Research shows children learn best through play. Discover how Happy Kidz integrates purposeful play into every lesson of the day.",
-    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80",
+    image: img5,
   },
   {
     title: "Annual Sports Day 2025 — A Day of Joy and Achievement",
@@ -32,7 +36,7 @@ const posts = [
     date: "January 15, 2025",
     author: "Happy Kidz Team",
     excerpt: "Our Annual Sports Day was a tremendous success! Here are the highlights from a day filled with excitement, teamwork, and proud parental moments.",
-    image: "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?w=600&q=80",
+    image: img6,
   },
   {
     title: "How to Prepare Your Child for Their First Day of School",
@@ -40,7 +44,7 @@ const posts = [
     date: "December 20, 2024",
     author: "Ms. Kavita Sharma",
     excerpt: "Starting preschool is a big milestone. We share top tips to help parents and children navigate this exciting transition with confidence.",
-    image: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80",
+    image: img7,
   },
   {
     title: "Art Therapy: Building Emotional Intelligence in Children",
@@ -48,7 +52,7 @@ const posts = [
     date: "December 5, 2024",
     author: "Ms. Deepa Rath",
     excerpt: "Creative art activities help children process emotions, build confidence, and develop self-expression skills that last a lifetime.",
-    image: "https://images.unsplash.com/photo-1605901309584-818e25452571?w=600&q=80",
+    image: img8,
   },
   {
     title: "Admissions Open for Academic Year 2025–26",
@@ -56,7 +60,7 @@ const posts = [
     date: "November 20, 2024",
     author: "Happy Kidz Team",
     excerpt: "We're excited to announce that admissions are now open for the new academic year. Limited seats available across all programs!",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
+    image: img9,
   },
   {
     title: "Summer Camp 2025: Register Now for Exciting Programs",
@@ -64,7 +68,7 @@ const posts = [
     date: "November 10, 2024",
     author: "Happy Kidz Team",
     excerpt: "Get ready for an unforgettable summer! Nature Camp, STEAM, Music, Sports, Cooking and Arts & Crafts camps are now open for registration.",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80",
+    image: img10,
   },
 ];
 

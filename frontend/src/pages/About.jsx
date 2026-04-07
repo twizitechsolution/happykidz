@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 import { Heart, Lightbulb, Users, Star, ArrowRight, CheckCircle, Globe, Smile, Shield, Award } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { fadeUp, fadeLeft, fadeRight, stagger, viewportOpts } from '../hooks/useScrollAnimation';
+import {
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15, img16, img17
+} from '../assets/images';
 
 const Wave = ({ fill, bg = "transparent" }) => (
   <div className="wave-divider" style={{ background: bg }}>
@@ -88,10 +92,10 @@ export default function About() {
             </motion.div>
             <motion.div className="grid grid-cols-2 gap-4" initial="hidden" whileInView="visible" viewport={viewportOpts} variants={fadeRight}>
               {[
-                "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
-                "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80",
-                "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
-                "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
+                img1,
+                img2,
+                img3,
+                img4,
               ].map((src, i) => (
                 <div key={i} className={`rounded-2xl overflow-hidden shadow-md ${i === 0 ? 'col-span-2 h-52' : 'h-44'}`}>
                   <img src={src} alt="School life" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
@@ -187,14 +191,14 @@ export default function About() {
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80",
-              "https://images.unsplash.com/photo-1561625116-5f8675632ab2?w=600&q=80",
-              "https://images.unsplash.com/photo-1605901309584-818e25452571?w=600&q=80",
-              "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&q=80",
-              "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80",
-              "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80",
-              "https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=600&q=80",
-              "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=600&q=80",
+              img5,
+              img6,
+              img7,
+              img8,
+              img9,
+              img10,
+              img11,
+              img12,
             ].map((src, i) => (
               <motion.div key={i} className="rounded-2xl overflow-hidden h-44"
                 initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}>

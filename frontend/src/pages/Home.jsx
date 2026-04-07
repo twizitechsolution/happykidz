@@ -7,6 +7,10 @@ import {
   Lightbulb, Leaf, Hash, Clock
 } from 'lucide-react';
 import { fadeUp, stagger, viewportOpts } from '../hooks/useScrollAnimation';
+import {
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15, img16, img17
+} from '../assets/images';
 
 const LOGO = "https://customer-assets.emergentagent.com/job_e8d411ed-442e-4bb2-8983-8c3ef5c754a7/artifacts/0cxz66vb_IMG_20260403_184615.jpg";
 
@@ -36,10 +40,10 @@ const highlights = [
 ];
 
 const programs = [
-  { title: "Playgroup", age: "1.5 – 2.5 Years", desc: "Gentle introduction to learning through play, songs, and joyful exploration.", image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80", bg: "#FDE8E9", accent: "#C8161D" },
-  { title: "Nursery", age: "2.5 – 3.5 Years", desc: "Building social skills, early literacy and motor development through fun.", image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80", bg: "#F3F9E2", accent: "#9DC41E" },
-  { title: "Pre-KG & KG", age: "3.5 – 6 Years", desc: "School-readiness with reading, writing, numeracy and critical thinking skills.", image: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=600&q=80", bg: "#E0F2FE", accent: "#0284c7" },
-  { title: "Summer Camp", age: "All Ages", desc: "Fun-filled seasonal camps — Nature, Arts, Music, Sports, Cooking, STEAM.", image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80", bg: "#FEF9C3", accent: "#ca8a04" },
+  { title: "Playgroup", age: "1.5 – 2.5 Years", desc: "Gentle introduction to learning through play, songs, and joyful exploration.", image: img1, bg: "#FDE8E9", accent: "#C8161D" },
+  { title: "Nursery", age: "2.5 – 3.5 Years", desc: "Building social skills, early literacy and motor development through fun.", image: img2, bg: "#F3F9E2", accent: "#9DC41E" },
+  { title: "Pre-KG & KG", age: "3.5 – 6 Years", desc: "School-readiness with reading, writing, numeracy and critical thinking skills.", image: img3, bg: "#E0F2FE", accent: "#0284c7" },
+  { title: "Summer Camp", age: "All Ages", desc: "Fun-filled seasonal camps — Nature, Arts, Music, Sports, Cooking, STEAM.", image: img4, bg: "#FEF9C3", accent: "#ca8a04" },
 ];
 
 const routine = [
@@ -65,18 +69,18 @@ const themes = [
 ];
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80", alt: "Classroom fun" },
-  { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80", alt: "Reading time" },
-  { src: "https://images.unsplash.com/photo-1561625116-5f8675632ab2?w=600&q=80", alt: "Outdoor play" },
-  { src: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80", alt: "Art & craft" },
-  { src: "https://images.unsplash.com/photo-1605901309584-818e25452571?w=600&q=80", alt: "Creative play" },
-  { src: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80", alt: "Teacher care" },
-  { src: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=600&q=80", alt: "Learning together" },
-  { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80", alt: "Classroom" },
-  { src: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80", alt: "Sports & fitness" },
-  { src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80", alt: "Block play" },
-  { src: "https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=600&q=80", alt: "Art class" },
-  { src: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&q=80", alt: "Story time" },
+  { src: img5, alt: "Classroom fun" },
+  { src: img6, alt: "Reading time" },
+  { src: img7, alt: "Outdoor play" },
+  { src: img8, alt: "Art & craft" },
+  { src: img9, alt: "Creative play" },
+  { src: img10, alt: "Teacher care" },
+  { src: img11, alt: "Learning together" },
+  { src: img12, alt: "Classroom" },
+  { src: img13, alt: "Sports & fitness" },
+  { src: img14, alt: "Block play" },
+  { src: img15, alt: "Art class" },
+  { src: img16, alt: "Story time" },
 ];
 
 const testimonials = [
@@ -144,18 +148,18 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="rounded-[2rem] overflow-hidden shadow-xl h-60">
-                  <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80" alt="Kids learning" className="w-full h-full object-cover" />
+                  <img src={img1} alt="Kids learning" className="w-full h-full object-cover" />
                 </div>
                 <div className="rounded-[2rem] overflow-hidden shadow-xl h-44">
-                  <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80" alt="Art class" className="w-full h-full object-cover" />
+                  <img src={img2} alt="Art class" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="space-y-4 mt-8">
                 <div className="rounded-[2rem] overflow-hidden shadow-xl h-44">
-                  <img src="https://images.unsplash.com/photo-1561625116-5f8675632ab2?w=600&q=80" alt="Outdoor fun" className="w-full h-full object-cover" />
+                  <img src={img3} alt="Outdoor fun" className="w-full h-full object-cover" />
                 </div>
                 <div className="rounded-[2rem] overflow-hidden shadow-xl h-60">
-                  <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Reading" className="w-full h-full object-cover" />
+                  <img src={img4} alt="Reading" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -177,7 +181,7 @@ export default function Home() {
           </motion.div>
           {/* Mobile hero image */}
           <div className="lg:hidden rounded-[2rem] overflow-hidden shadow-2xl h-64">
-            <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=800&q=80" alt="Happy kids" className="w-full h-full object-cover" />
+            <img src={img5} alt="Happy kids" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -378,7 +382,7 @@ export default function Home() {
               <Link to="/about" className="btn-secondary">Learn More <ArrowRight size={18} /></Link>
             </motion.div>
             <motion.div className="grid grid-cols-2 gap-4" initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              {["https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80", "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80", "https://images.unsplash.com/photo-1605901309584-818e25452571?w=600&q=80", "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&q=80"].map((src, i) => (
+              {[img11, img12, img13, img14].map((src, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden shadow-md h-44">
                   <img src={src} alt="School life" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>

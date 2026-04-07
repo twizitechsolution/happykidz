@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 import { BookOpen, Heart, Star, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { fadeUp, stagger, viewportOpts } from '../hooks/useScrollAnimation';
+import {
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15, img16, img17
+} from '../assets/images';
 
 const Wave = ({ fill, bg = "transparent" }) => (
   <div className="wave-divider" style={{ background: bg }}>
@@ -20,7 +24,7 @@ const leadership = [
     exp: "15+ Years Experience",
     qual: "M.Ed., B.Ed., ECE Certified",
     bio: "Mrs. Das founded Happy Kidz with a vision to provide world-class early education in Bhubaneswar. Her passion for children's holistic development drives the entire school.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80",
+    image: img11,
     fav: "The Very Hungry Caterpillar",
   },
   {
@@ -29,20 +33,20 @@ const leadership = [
     exp: "12+ Years Experience",
     qual: "B.Ed., Montessori Certified",
     bio: "Mrs. Mohapatra oversees curriculum development and teacher training, ensuring every classroom delivers the highest quality of early learning experiences.",
-    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=80",
+    image: img12,
     fav: "Where the Wild Things Are",
   },
 ];
 
 const teachers = [
-  { name: "Ms. Kavita Sharma", role: "Nursery Class Teacher", exp: "8 Years", qual: "B.Ed., Child Psychology", image: "https://i.pravatar.cc/300?img=44", fav: "Goodnight Moon" },
-  { name: "Ms. Ritu Panda", role: "Kindergarten Teacher", exp: "6 Years", qual: "M.A. Education", image: "https://i.pravatar.cc/300?img=45", fav: "Charlotte's Web" },
-  { name: "Mr. Suresh Nayak", role: "Physical Education", exp: "10 Years", qual: "B.P.Ed., Sports Science", image: "https://i.pravatar.cc/300?img=33", fav: "The Champion Sports Kid" },
-  { name: "Ms. Deepa Rath", role: "Art & Craft Teacher", exp: "7 Years", qual: "BFA, Art Education", image: "https://i.pravatar.cc/300?img=49", fav: "Harold and the Purple Crayon" },
-  { name: "Ms. Sunita Mishra", role: "Music Teacher", exp: "5 Years", qual: "B.Mus., Classical Music", image: "https://i.pravatar.cc/300?img=50", fav: "Peter and the Wolf" },
-  { name: "Ms. Pooja Singh", role: "Playgroup Teacher", exp: "4 Years", qual: "B.Ed., Early Childhood Ed.", image: "https://i.pravatar.cc/300?img=41", fav: "Pat the Bunny" },
-  { name: "Mr. Amit Kumar", role: "Computer Teacher", exp: "6 Years", qual: "MCA, CTET Qualified", image: "https://i.pravatar.cc/300?img=35", fav: "Ada Twist, Scientist" },
-  { name: "Ms. Meena Behera", role: "Library & Storytelling", exp: "9 Years", qual: "M.Lib., Storytelling Expert", image: "https://i.pravatar.cc/300?img=42", fav: "The Giving Tree" },
+  { name: "Ms. Kavita Sharma", role: "Nursery Class Teacher", exp: "8 Years", qual: "B.Ed., Child Psychology", image: img1, fav: "Goodnight Moon" },
+  { name: "Ms. Ritu Panda", role: "Kindergarten Teacher", exp: "6 Years", qual: "M.A. Education", image: img2, fav: "Charlotte's Web" },
+  { name: "Mr. Suresh Nayak", role: "Physical Education", exp: "10 Years", qual: "B.P.Ed., Sports Science", image: img3, fav: "The Champion Sports Kid" },
+  { name: "Ms. Deepa Rath", role: "Art & Craft Teacher", exp: "7 Years", qual: "BFA, Art Education", image: img4, fav: "Harold and the Purple Crayon" },
+  { name: "Ms. Sunita Mishra", role: "Music Teacher", exp: "5 Years", qual: "B.Mus., Classical Music", image: img5, fav: "Peter and the Wolf" },
+  { name: "Ms. Pooja Singh", role: "Playgroup Teacher", exp: "4 Years", qual: "B.Ed., Early Childhood Ed.", image: img6, fav: "Pat the Bunny" },
+  { name: "Mr. Amit Kumar", role: "Computer Teacher", exp: "6 Years", qual: "MCA, CTET Qualified", image: img7, fav: "Ada Twist, Scientist" },
+  { name: "Ms. Meena Behera", role: "Library & Storytelling", exp: "9 Years", qual: "M.Lib., Storytelling Expert", image: img8, fav: "The Giving Tree" },
 ];
 
 export default function Team() {

@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 import { Clock, ArrowRight, CheckCircle, Music, Palette, Dumbbell, Leaf, Utensils, Microscope, BookOpen, Users, Lightbulb } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { fadeUp, fadeLeft, fadeRight, stagger, viewportOpts } from '../hooks/useScrollAnimation';
+import {
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15, img16, img17
+} from '../assets/images';
 
 const Wave = ({ fill, bg = "transparent" }) => (
   <div className="wave-divider" style={{ background: bg }}>
@@ -20,7 +24,7 @@ const programs = [
     subtitle: "Foundation of Fun Learning",
     age: "1.5 – 2.5 Years",
     duration: "3 Hours / Day",
-    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&q=80",
+    image: img13,
     color: "#FDE8E9", accentColor: "#C8161D",
     desc: "Our Playgroup program gently introduces toddlers to structured learning through play, music, storytelling, and creative activities in a warm and welcoming environment.",
     features: ["Sensory play & exploration", "Music and movement", "Early language development", "Social skill building", "Art & craft activities", "Outdoor play sessions"],
@@ -31,7 +35,7 @@ const programs = [
     subtitle: "Building Early Skills",
     age: "2.5 – 3.5 Years",
     duration: "4 Hours / Day",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+    image: img14,
     color: "#F3F9E2", accentColor: "#9DC41E",
     desc: "The Nursery program builds essential social, cognitive, and motor skills through structured play, stories, art, science exploration, and early academic concepts.",
     features: ["Early reading readiness", "Number concepts & counting", "Fine & gross motor skills", "Social-emotional development", "Science exploration", "Creative expression"],
@@ -42,7 +46,7 @@ const programs = [
     subtitle: "Stepping Towards School",
     age: "3.5 – 4.5 Years",
     duration: "5 Hours / Day",
-    image: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=800&q=80",
+    image: img15,
     color: "#E0F2FE", accentColor: "#0284c7",
     desc: "Pre-KG bridges the gap between play-based learning and formal schooling, introducing structured academics while keeping the joy of discovery alive every day.",
     features: ["Alphabet & phonics", "Number recognition 1–50", "Writing readiness", "Critical thinking games", "Introduction to Hindi", "Environmental awareness"],
@@ -53,7 +57,7 @@ const programs = [
     subtitle: "Ready for the World",
     age: "4 – 6 Years",
     duration: "6 Hours / Day",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80",
+    image: img16,
     color: "#FEF9C3", accentColor: "#ca8a04",
     desc: "Our comprehensive Kindergarten program ensures children are fully school-ready with strong academic foundations, social confidence, and a lifelong love of learning.",
     features: ["Full reading & writing", "Mathematics foundations", "Science & discovery", "Computer basics", "Sports & fitness", "Leadership & confidence"],
@@ -205,7 +209,7 @@ export default function Programs() {
                 <Link to="/admissions" className="btn-secondary" data-testid="after-school-enroll-btn">Enroll Now <ArrowRight size={18} /></Link>
               </motion.div>
               <motion.div className="grid grid-cols-2 gap-3" initial="hidden" whileInView="visible" viewport={viewportOpts} variants={fadeRight}>
-                {["https://images.unsplash.com/photo-1605901309584-818e25452571?w=400&q=80", "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80", "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&q=80", "https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=400&q=80"].map((src, i) => (
+                {[img17, img1, img2, img3].map((src, i) => (
                   <div key={i} className="rounded-2xl overflow-hidden h-36">
                     <img src={src} alt="After school" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
